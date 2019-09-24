@@ -11,32 +11,32 @@
         <!-- we add detectionMode and matrixCodeType to tell AR.js to recognize barcode markers -->
         <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
 
-        <a-assets>
+               <a-assets>
             <a-asset-item id="animated-asset" src="https://raw.githubusercontent.com/HybridHistories/hybridhistories.github.io/master/donut.gltf"></a-asset-item>
-        
-            <a-asset-item id="transpImage" src="https://raw.githubusercontent.com/HybridHistories/hybridhistories.github.io/master/woods.png"></a-asset-item>
-            
-            </a-assets>
+        </a-assets>
+
+            <img id="transpImage" src="https://raw.githubusercontent.com/HybridHistories/hybridhistories.github.io/master/woods.png">
+
+
+    <a-marker-camera preset='hiro'></a-marker-camera>
+        </a-assets
 
         <a-marker type='barcode' value='7'>
-            <a-box position='0 0 0' color="yellow"></a-box>
+            <a-box position='0 0.5 0' color="yellow"></a-box>
         </a-marker>
-            
+
         <a-marker type='barcode' value='3'>
-           <a-image position='1 1 1' width="16" height="9" src="https://raw.githubusercontent.com/HybridHistories/hybridhistories.github.io/master/woods.pnge"></a-image>
+           <a-image width="1" height="1" src="#transpImage"></a-image>
         </a-marker>
 
         <a-marker id="animated-marker" type='barcode' value='5'>
             <a-entity
                 gltf-model="#animated-asset"
-                scale="1">
+                scale="2">
             </a-entity>
         </a-marker>
-            
-            
+
+
 
         <a-entity camera></a-entity>
         </a-scene>
-      </body>
-</html>
-
