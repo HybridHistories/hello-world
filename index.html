@@ -11,15 +11,12 @@
         <!-- we add detectionMode and matrixCodeType to tell AR.js to recognize barcode markers -->
         <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
 
-               <a-assets>
+     <a-assets>
             <a-asset-item id="animated-asset" src="https://raw.githubusercontent.com/HybridHistories/hybridhistories.github.io/master/donut.gltf"></a-asset-item>
-        </a-assets>
 
             <img id="transpImage" src="https://raw.githubusercontent.com/HybridHistories/hybridhistories.github.io/master/woods.png">
 
-
-    <a-marker-camera preset='hiro'></a-marker-camera>
-        </a-assets
+        </a-assets>
 
         <a-marker type='barcode' value='7'>
             <a-box position='0 0.5 0' color="yellow"></a-box>
