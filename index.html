@@ -13,8 +13,10 @@
 
      <a-assets>
             <a-asset-item id="animated-asset" src="https://raw.githubusercontent.com/HybridHistories/hybridhistories.github.io/master/donut.gltf"></a-asset-item>
-
+    
             <img id="transpImage" src="https://raw.githubusercontent.com/HybridHistories/hybridhistories.github.io/master/Woods.png">
+
+         <audio id="sound" src="audio.mp3" preload="auto"></audio>
 
         </a-assets>
 
@@ -34,6 +36,20 @@
         </a-marker>
 
 
-
+        <a-entity sound="src: #sound" autoplay="false"></a-entity>
         <a-entity camera></a-entity>
         </a-scene>
+        
+        <script>
+AFRAME.registerComponent('soundhandler', {
+    tick: function () {
+           var entity = document.querySelector('[sound]');
+         if (document.querySelector('a-marker').object3D.visible == true) {
+            entity.components.sound.playSound();
+        } else {
+            entity.components.sound.pauseSound();
+        }
+
+     }
+});
+</script>
