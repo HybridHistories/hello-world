@@ -12,8 +12,10 @@
         <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
 
      <a-assets>
-            ##<a-asset-item id="animated-asset" src="https://raw.githubusercontent.com/HybridHistories/hybridhistories.github.io/master/donut.gltf"></a-asset-item>
-            <a-asset-item id="turtle" src="https://raw.githubusercontent.com/HybridHistories/hybridhistories.github.io/master/images/scene.gltf"></a-asset-item>
+            <a-asset-item id="animated-asset" src="https://raw.githubusercontent.com/HybridHistories/hybridhistories.github.io/master/images/scene.gltf"></a-asset-item>
+            
+        
+         
     
             <img id="transpImage" src="https://raw.githubusercontent.com/HybridHistories/hybridhistories.github.io/master/Woods.png">
 
@@ -30,7 +32,7 @@
         </a-marker>
 
         <a-marker id="animated-marker" type='barcode' value='5'>
-            <a-entity gltf-model="#turtle" position="0 5 0" rotation="0 90 0" scale="1 1 1">
+            <a-entity gltf-model="#animated-asset" position="0 5 0" rotation="0 90 0" scale="1 1 1">
             </a-entity>
         </a-marker>
 
